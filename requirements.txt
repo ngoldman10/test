@@ -2,4 +2,6 @@ altair
 pandas
 streamlit
 requests
-sleeper_api_wrapper==1.0.7
+numpy
+os
+openai
