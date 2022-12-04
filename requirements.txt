@@ -3,5 +3,4 @@ pandas
 streamlit
 requests
 numpy
-os
 openai
