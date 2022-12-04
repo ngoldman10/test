@@ -10,10 +10,12 @@ from sleeper_wrapper import League
 This is an app
 """
 
-league_id = '865065387836960768'
-league = League(league_id)
+
 
 title = st.text_input('Movie title', 'user input')
 st.write('Try this:', title)
 
-league.get_rosters()
+league_id = '865065387836960768'
+league = League(league_id)
+a = league.get_rosters()
+st.json(a, expanded=True)
