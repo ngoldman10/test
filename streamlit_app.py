@@ -9,7 +9,7 @@ import openai
 """
 This is an app
 """
-key = ${{ secrets.API_KEY }}
+key: ${{ secrets.API_KEY }}
 openai.api_key = key
 mlist = openai.Model.list()
 st.json(mlist,expanded=True)
