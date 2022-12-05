@@ -24,5 +24,5 @@ r = openai.Completion.create(
 rtext = r['choices'][0]['text']
 rtext = rtext.replace("\n","")
 
-st.write('<br />')
+st.markdown('<br />')
 st.write(rtext)
