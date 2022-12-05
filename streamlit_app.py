@@ -5,9 +5,8 @@ import openai
 """
 This is an app
 """
-
-openai.api_key = "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"
-
+key = ${{ secrets.SuperSecret }}
+openai.api_key = key
 openai.Completion.create(
   model="text-davinci-003",
   prompt="Say this is a test",
