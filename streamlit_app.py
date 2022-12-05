@@ -3,9 +3,6 @@ import os
 import streamlit as st
 import openai
 
-"""
-This is an app
-"""
 
 prompt_start = ("Speak with the tone and vernacular of Stephen A. Smith from ESPN.\n\nPremise: Someone gets Stephen A. Smith started on ")
 prompt_end = (", and Stephen A. Smith responds.\n\nStephen A. Smith:")
@@ -27,4 +24,5 @@ r = openai.Completion.create(
 rtext = r['choices'][0]['text']
 rtext = rtext.replace("\n","")
 
+st.write('<br><br>')
 st.write(rtext)
