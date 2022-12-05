@@ -16,6 +16,7 @@ prompt1 = st.text_input('Prompt', initial_topic)
 combo = (prompt_start + prompt1 + prompt_end)
 
 openai.api_key = st.secrets.key
+
 r = openai.Completion.create(
   model="text-davinci-003",
   prompt=combo,
@@ -23,4 +24,7 @@ r = openai.Completion.create(
   temperature=.9
 )
 
-st.json(r,expanded=True)
+rtext = r['choices'][0]['text']
+rtext = rtext.replace("\n","")
+
+st.write(rtext)
