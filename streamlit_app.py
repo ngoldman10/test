@@ -5,7 +5,7 @@ import openai
 """
 This is an app
 """
-key = ${{ secrets.SuperSecret }}
+key = ${{ secrets.API_KEY }}
 openai.api_key = key
 r = openai.Completion.create(
   model="text-davinci-003",
