@@ -10,7 +10,7 @@ initial_topic = ("the best highways in America")
 
 
 
-prompt1 = st.text_input('Prompt', initial_topic, key="textkey)
+prompt1 = st.text_input('Prompt', initial_topic, key="textkey")
 st.write(st.session_state.textkey)
                         
 combo = (prompt_start + prompt1 + prompt_end)
