@@ -26,6 +26,14 @@ rtext = rtext.replace("\n","")
 
 st.write('')
 st.write('')
-st.write(rtext)
 
-st.image("https://ih1.redbubble.net/image.2640223911.0420/st,small,507x507-pad,600x600,f8f8f8.jpg")
+display = st.radio(
+    "Pace the show",
+    ('First take is Live', 'First take is on break'))
+
+if display == 'First take is Live':
+    st.write(rtext)
+    st.image("https://ih1.redbubble.net/image.2640223911.0420/st,small,507x507-pad,600x600,f8f8f8.jpg")
+else:
+    st.write("Don't touch that dial!")
+
