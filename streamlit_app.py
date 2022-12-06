@@ -6,13 +6,18 @@ import openai
 
 prompt_start = ("Speak with the tone and vernacular of Stephen A. Smith from ESPN.\n\nPremise: Someone gets Stephen A. Smith started on ")
 prompt_end = (", and Stephen A. Smith responds.\n\nStephen A. Smith:")
-initial_topic = ("the best highways in America")
+#initial_topic = ("the best highways in America")
 
 
+prompt1 = st.text_input('Prompt', "Enter a topic then press enter. Ex:the best highways in America", key="textkey")
 
-prompt1 = st.text_input('Prompt', initial_topic, key="textkey")
 st.write(st.session_state.textkey)
-                        
+
+if st.session_state.textkey == "Enter a topic then press enter. Ex:the best highways in America":
+    st.write("Have not begun")
+else:
+    st.write("We have indeed begun!")
+
 combo = (prompt_start + prompt1 + prompt_end)
 
 #openai.api_key = st.secrets.key
