@@ -21,7 +21,6 @@ openai.api_key = st.secrets.key
 if st.session_state.textkey == "Enter a topic then press enter. Ex:the best highways in America":
   st.write("I've got something to say when you press enter.")
 else:
-  st.write("This is prompt 1: "+ prompt1)
   r = openai.Completion.create(
     model="text-davinci-003",
     prompt=combo,
