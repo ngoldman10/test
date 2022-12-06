@@ -17,6 +17,7 @@ if st.session_state.textkey == "Enter a topic then press enter. Ex:the best high
     st.write("Have not begun")
 else:
     st.write("We have indeed begun!")
+    st.write("This is prompt 1: "+ prompt1)
 
 combo = (prompt_start + prompt1 + prompt_end)
 
