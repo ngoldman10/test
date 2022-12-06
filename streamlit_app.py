@@ -28,12 +28,12 @@ st.write('')
 st.write('')
 
 display = st.radio(
-    "Pace the show",
-    ('First take is Live', 'First take is on break'))
+    "Start the show",
+    ('Still airing Get Up!', 'First take is now Live'))
 
-if display == 'First take is Live':
+if display == 'Still airing Get Up!':
+    st.write("Don't touch that dial!")
+else:
     st.write(rtext)
     st.image("https://ih1.redbubble.net/image.2640223911.0420/st,small,507x507-pad,600x600,f8f8f8.jpg")
-else:
-    st.write("Don't touch that dial!")
 
