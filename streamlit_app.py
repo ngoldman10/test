@@ -10,7 +10,7 @@ prompt_end = (", and Stephen A. Smith responds.\n\nStephen A. Smith:")
 #Variable to store text input
 prompt1 = st.text_input('Prompt', "Enter a topic then press enter. **Ex: the best highways in America**", key="textkey")
 combo = (prompt_start + prompt1 + prompt_end)
-
+st.markdown("Enter a topic then press enter. **Ex: the best highways in America**")
 st.write('')
 st.write('')
 
@@ -18,16 +18,16 @@ st.write('')
 openai.api_key = st.secrets.key
 
 #main flow
-if st.session_state.textkey == "Enter a topic then press enter. Ex:the best highways in America":
-  st.write("I've got something to say when you press enter.")
-else:
-  r = openai.Completion.create(
-    model="text-davinci-003",
-    prompt=combo,
-    max_tokens=256,
-    temperature=.9)
-  rtext = r['choices'][0]['text']
-  rtext = rtext.replace("\n","")
-  st.write(rtext)
-  st.image("https://ih1.redbubble.net/image.2640223911.0420/st,small,507x507-pad,600x600,f8f8f8.jpg")
+#if st.session_state.textkey == "Enter a topic then press enter. Ex:the best highways in America":
+  #st.write("I've got something to say when you press enter.")
+#else:
+  #r = openai.Completion.create(
+    #model="text-davinci-003",
+    #prompt=combo,
+    #max_tokens=256,
+    #temperature=.9)
+  #rtext = r['choices'][0]['text']
+  #rtext = rtext.replace("\n","")
+  #st.write(rtext)
+  #st.image("https://ih1.redbubble.net/image.2640223911.0420/st,small,507x507-pad,600x600,f8f8f8.jpg")
 
