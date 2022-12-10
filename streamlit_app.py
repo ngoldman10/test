@@ -8,7 +8,7 @@ prompt_start = ("Speak with the tone and vernacular of Stephen A. Smith from ESP
 prompt_end = (", and Stephen A. Smith responds.\n\nStephen A. Smith:")
 
 #Variable to store text input
-prompt1 = st.text_input('Prompt', "Enter a topic then press enter. Ex:the best highways in America", key="textkey")
+prompt1 = st.text_input('Prompt', "Enter a topic then press enter. **Ex: the best highways in America**", key="textkey")
 combo = (prompt_start + prompt1 + prompt_end)
 
 st.write('')
