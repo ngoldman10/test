@@ -6,11 +6,12 @@ import openai
 #prompt beginning and ending to pass to API
 prompt_start = ("Speak with the tone and vernacular of Stephen A. Smith from ESPN.\n\nPremise: Someone gets Stephen A. Smith started on ")
 prompt_end = (", and Stephen A. Smith responds.\n\nStephen A. Smith:")
+pl = st.markdown("Enter a topic then press enter. *Ex: the best highways in America*")
 
 #Variable to store text input
-prompt1 = st.text_input('Prompt', st.markdown("Enter a topic then press enter. *Ex: the best highways in America*"), key="textkey")
+prompt1 = st.text_input('Prompt', pl, key="textkey")
 combo = (prompt_start + prompt1 + prompt_end)
-st.markdown("Enter a topic then press enter. *Ex: the best highways in America*")
+
 st.write('')
 st.write('')
 
