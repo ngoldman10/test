@@ -2,6 +2,8 @@ import pandas as pd
 import os
 import streamlit as st
 import openai
+from transformers import GPT2TokenizerFast
+tokenizer = GPT2TokenizerFast.from_pretrained("gpt2")
 
 #prompt beginning and ending to pass to API
 prompt_start = ("Speak with the tone and vernacular of Stephen A. Smith from ESPN.\n\nPremise: Someone gets Stephen A. Smith started on ")
@@ -10,6 +12,10 @@ prompt_end = (", and Stephen A. Smith responds.\n\nStephen A. Smith:")
 #Variable to store text input
 prompt1 = st.text_input('Enter a topic then press enter', "Ex: the best highways in America", key="textkey")
 combo = (prompt_start + prompt1 + prompt_end)
+
+#count tokens
+tot_input_tokens = len(tokenizer(combo)['input_ids'])
+st.write(tot_input_tokens)
 
 st.write('')
 st.write('')
