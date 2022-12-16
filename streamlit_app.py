@@ -18,7 +18,6 @@ tot_input_tokens = len(tokenizer(combo)['input_ids'])
 st.write("Input tokens: ", tot_input_tokens)
 
 st.write('')
-st.write('')
 
 #api key
 openai.api_key = st.secrets.key
