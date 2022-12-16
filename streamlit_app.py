@@ -35,6 +35,6 @@ else:
   rtext = rtext.replace("\n","")
   tot_output_tokens = len(tokenizer(rtext)['input_ids'])
   st.write(rtext)
-  st.write("Output tokens: ", rtext)
+  st.write("Output tokens: ", tot_output_tokens)
   st.image("https://ih1.redbubble.net/image.2640223911.0420/st,small,507x507-pad,600x600,f8f8f8.jpg")
 
