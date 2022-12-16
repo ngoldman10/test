@@ -12,7 +12,7 @@ prompt_end = (", and Stephen A. Smith responds.\n\nStephen A. Smith:")
 #Variable to store text input
 prompt1 = st.text_input('Enter a topic then press enter', "Ex: the best highways in America", key="textkey")
 combo = (prompt_start + prompt1 + prompt_end)
-
+st.write(st.session_state.textkey)
 #count tokens
 tot_input_tokens = len(tokenizer(combo)['input_ids'])
 st.write("Input tokens: ", tot_input_tokens)
